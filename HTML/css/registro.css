@@ -16,3 +16,94 @@ body {
     background-position: center;
     color:white;
 }
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.registration-form {
+    background: linear-gradient(135deg, #000000, #ffd700); /* Combinación de negro a dorado */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    color: #fff; /* Color de texto blanco para combinar con el fondo */
+    animation: fadeInUp 1s ease; /* Animación de aparición al cargar la página */
+    background-size: 400% 400%; /* Ajusta según sea necesario */
+    animation: gradientAnimation 10s infinite; /* Controla la velocidad y duración de la animación */
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff; /* Color de texto blanco para combinar con el fondo */
+}
+
+.registration-form label {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #fff; /* Color de texto blanco para combinar con el fondo */
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: #000000; /* Fondo negro */
+    color: #ffd700; /* Texto dorado */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s; /* Transición específica para el cambio de color de fondo del botón y la transformación */
+}
+
+.registration-form button:hover {
+    background-color: #1a1a1a; /* Fondo negro más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Cambia el tamaño al pasar el mouse */
+}
+
+/* Animación de enfoque al hacer clic en el formulario */
+.registration-form:focus-within {
+    transform: scale(1.02); /* Cambia el tamaño al enfocar dentro del formulario */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Cambia la sombra al enfocar dentro del formulario */
+}
+
+/* Definición de la animación de aparición */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de fondo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

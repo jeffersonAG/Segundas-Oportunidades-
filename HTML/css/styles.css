@@ -33,19 +33,29 @@ body {
     margin: 0 auto;
 }
 
-/* Agrega estilos para el botón */
+/* Agrega estilos para el botón transparente con texto blanco y sin borde */
 .button-overlay {
     position: absolute;
     top: 10px; /* Ajusta la distancia desde la parte superior */
     right: 10px; /* Ajusta la distancia desde la parte derecha */
     padding: 10px 20px;
-    background-color: #ffffff; /* Color de fondo del botón */
-    color: #000000; /* Color del texto del botón */
-    border: none;
+    background-color: transparent; /* Fondo transparente del botón */
+    color: #ffffff; /* Texto blanco del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
     cursor: pointer;
     font-size: 16px;
+    font-family: 'Times New Roman', Times, serif; /* Fuente estilo antiguo */
+    transition: color 0.3s; /* Transición de 0.3 segundos para el color del texto */
 }
-/* Agrega estilos para el botón */
+
+/* Efecto al pasar el mouse - Puedes personalizar según tus preferencias */
+.button-overlay:hover {
+    color: #ffd700; /* Texto blanco más intenso al pasar el mouse */
+}
+
+
+
 .carrito-overlay {
     position: absolute;
     top: 10px; /* Ajusta la distancia desde la parte superior */
@@ -56,4 +66,4 @@ body {
     border: none;
     cursor: pointer;
     font-size: 16px;
-}
+} 

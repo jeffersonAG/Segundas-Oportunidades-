@@ -1,13 +1,32 @@
+<!-- registro.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="css/registro.css">
-
 </head>
 <body>
-    <div class="wrap2"></div>
+    <div class="wrap2">
+        <div class="registration-container">
+            <form class="registration-form">
+                <h2>Registro</h2>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
