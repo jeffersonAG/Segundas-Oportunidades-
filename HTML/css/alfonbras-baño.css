@@ -1,0 +1,16 @@
+/* styles.css */
+
+body {
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+}
+.fondo-alfonbra-baño{
+    position: relative; /* Añade posicionamiento relativo */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(0 0 0 /.5), rgb(0 0 0 / .5)), url('../image/background.jpg'); /* Ajusta la ruta según sea necesario */
+    background-size: cover;
+    background-position: center;
+}

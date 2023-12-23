@@ -54,16 +54,151 @@ body {
     color: #ffd700; /* Texto blanco más intenso al pasar el mouse */
 }
 
-
-
 .carrito-overlay {
     position: absolute;
     top: 10px; /* Ajusta la distancia desde la parte superior */
-    right: 250px; /* Ajusta la distancia desde la parte derecha */
+    right: 100px; /* Ajusta la distancia desde la parte derecha */
     padding: 10px 20px;
-    background-color: #ffffff; /* Color de fondo del botón */
-    color: #000000; /* Color del texto del botón */
+    background-color: transparent; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
     border: none;
     cursor: pointer;
     font-size: 16px;
+    font-family: 'Times New Roman', Times, serif; /* Fuente estilo antiguo */
+    transition: color 0.3s; /* Transición de 0.3 segundos para el color del texto */
+}
+
+.carrito-overlay:hover {
+    color: #ffd700; /* Texto blanco más intenso al pasar el mouse */
+}
+
+/* Ajustes para el formulario de búsqueda */
+.search-form {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 225px; /* Ajusta la distancia desde la parte derecha */
+    display: flex;
+}
+
+.search-form input {
+    padding: 10px;
+    background-color: #000; /* Cambia el color de fondo a negro */
+    color: #ffd700; /* Cambia el color del texto a dorado */
+    border: 1px solid #000; /* Cambia el color del borde a negro */
+    border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+    padding: 10px;
+    background-color: #ffd700; /* Cambia el color de fondo a dorado */
+    color: #000; /* Cambia el color del texto a negro */
+    border: 1px solid #ffd700; /* Cambia el color del borde a dorado */
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #fbcf00; /* Cambia el color de fondo al pasar el mouse */
+    border: 1px solid #fbcf00; /* Cambia el color del borde al pasar el mouse */
+}
+/* Estilos del menú vertical */
+.menu-wrapper {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.menu-vertica {
+    cursor: pointer;
+    background: linear-gradient(135deg, #000000, #ffd700); /* Fondo similar al de la página de login */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.menu-vertica:hover {
+    background-color: #1a1a1a; /* Fondo negro más oscuro al pasar el mouse */
+}
+
+#menu-toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+.vertical-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(135deg, #000000, #ffd700); /* Fondo similar al de la página de login */
+    padding-top: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInRight 0.5s ease; /* Agrega la animación de entrada */
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.vertical-menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.vertical-menu a:hover {
+    color: #f1f1f1;
+}
+
+#menu-toggle:checked + .menu-vertica + .vertical-menu {
+   display: block;
+}
+
+/* Estilos adicionales para el botón "Cerrar" dentro del menú */
+.vertical-menu .close-menu-btn {
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    text-align: center;
+    background-color: #1a1a1a; /* Fondo negro más oscuro */
+    cursor: pointer;
+    transition: 0.3s;
 } 
+
+.vertical-menu .close-menu-btn:hover {
+    background-color: #555; /* Fondo más oscuro al pasar el mouse */
+}
+
+/* Animación de fondo más rápida */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.vertical-menu {
+    animation: fadeInRight 0.5s ease, gradientAnimation 5s infinite; /* Combina las animaciones */
+}
+

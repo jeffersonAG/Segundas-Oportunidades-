@@ -3,34 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segundas Oportunidades </title>
+    <title>Segundas Oportunidades</title>
     <link rel="stylesheet" href="css/styles.css">
-   
 </head>
 <body>   
     <div class="wrap">
         <div class="wrap-texto">
             <h1>
                 Segundas Oportunidades
-            </h1>
+           </h1>
             <p>
                 En nuestra empresa, nos dedicamos con pasión a la resurrección de materiales descartados, 
                 otorgándoles una segunda oportunidad para transformarlos en productos completamente
                  renovados y respetuosos con el medio ambiente. Nuestra misión es fusionar la innovación 
                  con la sostenibilidad, creando así artículos únicos que no solo cumplen con los más altos 
                  estándares de calidad, sino que también contribuyen a la preservación del entorno.
-                  Bienvenido a un mundo donde la reinvención se convierte en una forma de arte, y cada
+                   Bienvenido a un mundo donde la reinvención se convierte en una forma de arte, y cada
                   objeto cuenta una historia de renacimiento y compromiso con un futuro más sustentable.
             </p>
         </div>
+        <form class="search-form">
+            <input type="text" placeholder="Buscar artículos...">
+            <button type="submit">Buscar</button>
+        </form>
     </div>
+
     <div>
         <button class="button-overlay" onclick="window.location.href='login.html'">Mi cuenta</button>
     </div>
     <div>
-        <button class="carrito-overlay" onclick="window.location.href='carrito.html'">carrito</button>
+        <button class="carrito-overlay" onclick="window.location.href='carrito.html'">Carrito</button>
     </div>
+    <div class="menu-wrapper">
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-vertica" for="menu-toggle">Menu</label>
     
+    <div class="vertical-menu">
+        <a href="javascript:void(0)" onclick="window.location.href='alfonbras-para-baño.html'"> Alfonbras para Baño </a>
+        <a href="javascript:void(0)" onclick="window.location.href='bolsas-de-compras.html'">Bolsas de bolsas compras</a>
+        <a href="javascript:void(0)" onclick="window.location.href='estuches-para-pañales.html'">Estuches para Pañales</a>
 
+        <!-- Agrega más enlaces según sea necesario -->
+        
+    </div>
+</div>
 </body>
 </html>
