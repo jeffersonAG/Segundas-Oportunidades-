@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 10px; /* Reducido el espacio entre productos */
 }
 
 /* Producto */
@@ -35,9 +35,9 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    width: calc(30% - 20px); /* Ajustado el ancho de los productos para 3 por columna */
-    max-width: 200px; /* Ancho máximo de los productos */
-    margin-bottom: 20px;
+    width: 200px; /* Ancho fijo para hacerlo cuadrado */
+    height: 200px; /* Alto fijo para hacerlo cuadrado */
+    margin: 10px;
     background-color: #000;
     color: #fff;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -51,35 +51,90 @@ body {
 
 .producto img {
     width: 100%;
-    height: 100px; /* Ajustado la altura de las imágenes */
+    height: 100%; /* Ajustado para que sea un cuadrado */
     object-fit: cover;
-    border-bottom: 1px solid #ddd;
     border-radius: 8px 8px 0 0;
 }
 
-/* Descripción del producto */
-.descripcion {
-    padding: 15px;
-    text-align: left;
+
+
+/* Ocultar descripción, precio y botón */
+.descripcion p,
+.precio,
+.producto button {
+    display: none;
 }
 
-/* Precio */
-.precio {
+/* Estilos del modal */
+.producto-modal {
+    display: none;
+}
+
+.producto:focus + .producto-modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 500px; /* Ancho fijo para hacerlo cuadrado */
+    height: 500px; /* Alto fijo para hacerlo cuadrado */
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #ffd700;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-content h2,
+.modal-content p,
+.modal-content .precio,
+.modal-content button {
+    margin: 10px 0;
+}
+
+.modal-content .precio {
     color: #ffd700;
     font-weight: bold;
 }
 
-/* Botón Agregar al Carrito */
-.producto button {
+/* Estilo mejorado del botón */
+.modal-content button {
     background-color: #ffd700;
     color: #000;
     border: none;
-    padding: 8px;
+    padding: 10px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.producto button:hover {
+.modal-content button:hover {
     background-color: #e0bb00;
 }
